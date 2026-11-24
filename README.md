@@ -11,6 +11,8 @@ Kazakhstan is moving the Kazakh language from Cyrillic to Latin script, but lang
 
 Tolkyn Zhagypar · Astana IT University · 2026
 
+📄 **Technical report:** [`paper/paper.pdf`](paper/paper.pdf)
+
 ---
 
 ## Key findings
@@ -73,19 +75,25 @@ Notes:
 ```
 kazakh-latin-robustness/
 ├── notebook/kazakh_latin_robustness.ipynb   # full pipeline (Colab), with outputs
-├── translit/cyr2lat.py                      # transliterator + tests
-├── data/                                    # Cyrillic + Latin benchmark, gold sample
+├── translit/cyr2lat.py                      # transliterator + built-in tests
+├── data/
+│   ├── belebele_kaz_cyrl.jsonl              # 900 questions, original Cyrillic
+│   ├── belebele_kaz_latn.jsonl              # the same 900 questions, 2021 Latin
+│   └── translit_gold_50.csv                 # 50 hand-checked sentences
 ├── results/
 │   ├── main_table.csv                       # accuracy, drop, McNemar, fertility
 │   ├── feature_flip_rates.csv               # flip rates by question feature
 │   ├── fertility.csv                        # tokens per word, both scripts
-│   ├── negation_difficulty_check.csv
-│   ├── iy_merger_flip_rates.csv             # и/й merger vs. flips (all / non-negation)
-│   ├── errors_sherkala_labeled.csv          # 50 categorized errors
-│   ├── preds_<model>_<script>.csv           # per-question predictions
-│   └── figures/
-└── paper/                                   # technical report (PDF)
+│   ├── negation_difficulty_check.csv        # Cyrillic accuracy, negation vs. other
+│   ├── iy_merger_flip_rates.csv             # и/й merger vs. flips
+│   ├── preds_<model>_<script>.csv           # per-question predictions (4 models × 2 scripts)
+│   ├── errors_<model>.csv                   # questions correct in Cyrillic, wrong in Latin
+│   ├── errors_sherkala_labeled.csv          # Sherkala errors, 50 labeled by category
+│   └── figures/                             # accuracy, fertility, negation plots
+└── paper/paper.pdf                          # technical report
 ```
+
+`<model>` is one of `sherkala`, `kazllm`, `qwen`, `llama`; `<script>` is `cyrl` or `latn`.
 
 ## Reproduce
 
@@ -97,6 +105,8 @@ To use only the transliterator:
 from translit.cyr2lat import cyr2lat
 cyr2lat("Қазақстан Республикасы")   # 'Qazaqstan Respublikasy'
 ```
+
+Run its tests with `python translit/cyr2lat.py`.
 
 ## Limitations
 
