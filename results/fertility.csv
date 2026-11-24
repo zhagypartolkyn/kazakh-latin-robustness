@@ -1,5 +1,5 @@
 model,fertility_cyrl,fertility_latn,ratio_latn_cyrl
 sherkala,1.841,3.17,1.722
+kazllm,4.813,3.407,0.708
 qwen,4.792,3.486,0.728
 llama,4.813,3.407,0.708
-kazllm,4.813,3.407,0.708
