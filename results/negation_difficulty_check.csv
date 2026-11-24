@@ -1,0 +1,5 @@
+model,cyrl_acc_negation_questions,cyrl_acc_other_questions
+sherkala,0.716,0.745
+kazllm,0.592,0.715
+qwen,0.428,0.524
+llama,0.413,0.589

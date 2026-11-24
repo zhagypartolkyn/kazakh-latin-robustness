@@ -1,3 +1,0 @@
-# eval
-
-Evaluation scripts.

@@ -1,0 +1,11 @@
+transformers
+accelerate
+bitsandbytes
+datasets
+torch
+pandas
+numpy
+matplotlib
+scipy
+statsmodels
+jiwer

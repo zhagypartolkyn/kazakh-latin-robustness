@@ -1,0 +1,5 @@
+model,model_name,acc_cyrl,acc_latn,drop,drop_CI95,cyr_right_lat_wrong,cyr_wrong_lat_right,mcnemar_p,fertility_cyrl,fertility_latn,ratio_latn_cyrl
+sherkala,Sherkala-Chat (8B),0.739,0.427,0.312,"[0.272, 0.352]",347,66,3.5e-43,1.841,3.17,1.722
+kazllm,KazLLM-1.0 (8B),0.688,0.323,0.364,"[0.328, 0.401]",370,42,2.2e-58,4.813,3.407,0.708
+llama,Llama-3.1-8B-Instruct,0.55,0.314,0.236,"[0.197, 0.274]",297,85,3.6e-27,4.813,3.407,0.708
+qwen,Qwen2.5-7B-Instruct,0.502,0.351,0.151,"[0.111, 0.191]",252,116,2e-12,4.792,3.486,0.728
