@@ -9,7 +9,7 @@
 
 Kazakhstan is moving the Kazakh language from Cyrillic to Latin script, but language models for Kazakh were trained almost entirely on Cyrillic text. This project measures how much these models lose when the **same** reading comprehension questions are written in the Latin alphabet, and looks at why.
 
-Tolkyn Zhagypar · Astana IT University · 2026
+Tolkyn Zhagypar · 2026
 
 📄 **Technical report:** [`paper/paper.pdf`](paper/paper.pdf)
 
